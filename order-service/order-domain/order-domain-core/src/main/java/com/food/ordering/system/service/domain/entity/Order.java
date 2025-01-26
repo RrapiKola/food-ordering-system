@@ -1,4 +1,4 @@
-package com.food.ordering.system.service.domain.enitity;
+package com.food.ordering.system.service.domain.entity;
 
 import com.food.ordering.system.domain.entity.AggregateRoot;
 import com.food.ordering.system.domain.valueobject.*;
@@ -17,6 +17,9 @@ public class Order extends AggregateRoot<OrderId> {
     private final StreetAddress deliveryAddress;
     private final Money price;
     private final List<OrderItem> items;
+
+
+
     private  List<String> failureMessages;
     private TrackingId trackingId;
     private OrderStatus orderStatus;
@@ -154,6 +157,11 @@ public class Order extends AggregateRoot<OrderId> {
 
     public List<String> getFailureMessages() {
         return failureMessages;
+    }
+
+
+    public static Order.Builder builder() {
+        return new Order.Builder();
     }
 
     public static final class Builder {

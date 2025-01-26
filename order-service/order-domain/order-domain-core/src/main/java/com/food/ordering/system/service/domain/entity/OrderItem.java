@@ -1,4 +1,4 @@
-package com.food.ordering.system.service.domain.enitity;
+package com.food.ordering.system.service.domain.entity;
 
 import com.food.ordering.system.domain.entity.BaseEntity;
 import com.food.ordering.system.domain.valueobject.Money;
@@ -33,6 +33,10 @@ public class OrderItem extends BaseEntity<OrderItemId> {
         quantity = builder.quantity;
         price = builder.price;
         subTotal = builder.subTotal;
+    }
+
+    public static OrderItem.Builder builder() {
+        return new OrderItem.Builder();
     }
 
     public static final class Builder {

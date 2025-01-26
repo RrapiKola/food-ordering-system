@@ -1,4 +1,4 @@
-package com.food.ordering.system.service.domain.enitity;
+package com.food.ordering.system.service.domain.entity;
 
 import com.food.ordering.system.domain.entity.AggregateRoot;
 import com.food.ordering.system.domain.valueobject.RestaurantId;
@@ -11,9 +11,14 @@ public class Restaurant extends AggregateRoot<RestaurantId> {
     private boolean active;
 
     private Restaurant(Builder builder) {
-        super .setId(builder.restaurantId);
+        super.setId(builder.restaurantId);
         products = builder.products;
         active = builder.active;
+    }
+
+
+    public static Builder builder() {
+        return new Builder();
     }
 
     public static final class Builder {
@@ -24,11 +29,7 @@ public class Restaurant extends AggregateRoot<RestaurantId> {
         private Builder() {
         }
 
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public Builder id(RestaurantId val) {
+        public Builder restaurantId(RestaurantId val) {
             restaurantId = val;
             return this;
         }
@@ -47,7 +48,6 @@ public class Restaurant extends AggregateRoot<RestaurantId> {
             return new Restaurant(this);
         }
     }
-
 
     public List<Product> getProducts() {
         return products;
