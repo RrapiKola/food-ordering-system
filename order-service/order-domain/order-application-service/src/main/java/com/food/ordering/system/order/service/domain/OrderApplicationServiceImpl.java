@@ -28,6 +28,6 @@ import org.springframework.validation.annotation.Validated;
 
     @Override
     public TrackOrderResponse trackOrder(TrackOrderQuery trackOrderQuery) {
-        return trackOrder(trackOrderQuery);
+        return orderTrackCommandHandler.trackOrder(trackOrderQuery);
     }
 }
