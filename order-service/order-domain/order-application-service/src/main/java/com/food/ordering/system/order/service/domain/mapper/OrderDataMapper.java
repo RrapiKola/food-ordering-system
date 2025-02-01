@@ -9,6 +9,7 @@ import com.food.ordering.system.order.service.domain.dto.create.CreateOrderComma
 import com.food.ordering.system.order.service.domain.dto.create.CreateOrderResponse;
 import com.food.ordering.system.order.service.domain.dto.create.OrderAddressDto;
 import com.food.ordering.system.order.service.domain.dto.create.OrderItemDto;
+import com.food.ordering.system.order.service.domain.dto.track.TrackOrderResponse;
 import com.food.ordering.system.service.domain.entity.Order;
 import com.food.ordering.system.service.domain.entity.OrderItem;
 import com.food.ordering.system.service.domain.entity.Product;
@@ -44,12 +45,21 @@ public class OrderDataMapper {
                .build();
     }
 
-    public CreateOrderResponse orderToCreateOrderResponse(Order order) {
+    public CreateOrderResponse orderToCreateOrderResponse(Order order,String message) {
        return CreateOrderResponse.builder()
                .orderTrackingId(order.getTrackingId().getValue())
                .orderStatus(order.getOrderStatus())
+               .message(message)
                .build();
 
+    }
+
+    public TrackOrderResponse orderToTrackOrderResponse(Order order) {
+       return TrackOrderResponse.builder()
+               .orderTrackingId(order.getTrackingId().getValue())
+               .orderStatus(order.getOrderStatus())
+               .failureMessages(order.getFailureMessages())
+               .build();
     }
 
 

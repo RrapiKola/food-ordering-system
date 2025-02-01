@@ -1,0 +1,15 @@
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/event/OrderEvent.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/OrderDomainServiceImpl.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/valueobject/StreetAddress.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/entity/Order.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/entity/Restaurant.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/exception/OrderDomainException.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/entity/Product.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/event/OrderCreatedEvent.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/valueobject/TrackingId.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/entity/OrderItem.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/entity/Customer.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/event/OrderCancelledEvent.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/event/OrderPaidEvent.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/OrderDomainService.java
+/Users/rrapikola/IdeaProjects/food-ordering-system/order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/service/domain/valueobject/OrderItemId.java
