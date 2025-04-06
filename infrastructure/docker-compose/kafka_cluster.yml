@@ -9,6 +9,7 @@ services:
       - kafka-broker-3
     ports:
       - "8081:8081"
+    restart: "no"
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
       SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: 'zookeeper:2181'
@@ -22,6 +23,7 @@ services:
     hostname: kafka-broker-1
     ports:
       - "19092:19092"
+    restart: "no"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -39,6 +41,7 @@ services:
     hostname: kafka-broker-2
     ports:
       - "29092:29092"
+    restart: "no"
     environment:
       KAFKA_BROKER_ID: 2
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -56,6 +59,7 @@ services:
     hostname: kafka-broker-3
     ports:
       - "39092:39092"
+    restart: "no"
     environment:
       KAFKA_BROKER_ID: 3
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -70,7 +74,7 @@ services:
       - ${GLOBAL_NETWORK:-kafka}
   kafka-manager:
     image: hlebalbau/kafka-manager:stable
-    restart: always
+    restart: "no"
     ports:
       - "9000:9000"
     environment:
